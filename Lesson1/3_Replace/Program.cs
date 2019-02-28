@@ -1,8 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+/*
+ * 3. Написать программу обмена значениями двух целочисленных переменных:
+ * a. с использованием третьей переменной;
+ * b. *без использования третьей переменной.
+ */
 
 namespace _Replace
 {
@@ -27,7 +28,6 @@ namespace _Replace
             b = int.Parse(Read(x + 20, y + 4));
             Print("Вторая переменная:", x + 1, y + 4, ConsoleColor.Green);
             Print(b.ToString(), x + 20, y + 4, ConsoleColor.Red);
-            // Print("ИМТ: " + IMT(height, weight), x + 5, y + 6, ConsoleColor.Red);
             Print("Поменять местами - эникей", x - 1, y + 7, ConsoleColor.Gray);
             Console.ReadKey();
             Print(a.ToString(), x + 20, y + 3, ConsoleColor.Black);
