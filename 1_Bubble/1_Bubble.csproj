@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8430C58E-EF94-4127-8E06-23451590EBC1}</ProjectGuid>
+    <ProjectGuid>{F66E1D23-B2DB-4DB5-91DD-8C577484A8AB}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Lesson3</RootNamespace>
-    <AssemblyName>Lesson3</AssemblyName>
+    <RootNamespace>_1_Bubble</RootNamespace>
+    <AssemblyName>1_Bubble</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
