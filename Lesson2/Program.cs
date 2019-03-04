@@ -41,7 +41,7 @@ namespace _10to2
             x10 = int.Parse(Read(x + 22, y + 3));
             Print("Число в 10й системе:", x + 1, y + 3, ConsoleColor.Green);
             Print("Число в 2й системе:", x + 2, y + 4, ConsoleColor.White);
-            Print(ConvertTo2(x10), x + 22, y + 4, ConsoleColor.White);
+            Print(ConvertTo2R(x10).ToString(), x + 22, y + 4, ConsoleColor.White);
             Print("Нажмите эникей для выхода", x - 1, y + 15, ConsoleColor.Gray);
             Console.ReadKey();
         }
@@ -49,26 +49,41 @@ namespace _10to2
         static string ConvertTo2(int x10)
         {
             int h= 1+(int)Math.Log(x10, 2);
-            char[] mas = new char[h];
+            byte[] mas = new byte[h];
             int i = 0;
             string str = "";
             while (x10 > 1)
             {
-                mas[i] = (char)(x10 % 2);
+                mas[i] = (byte) (x10 % 2);
                 i++;
-                str += x10 % 2;
+                
                 x10 = x10 / 2;
             }
-            mas[i+1] = (char)(x10);
-           // str += x10;
-            foreach (char c in mas)
+            mas[i] = (byte)(x10);
+           
+            for (i= mas.Length-1; i>=0; i--)
             {
-                str += c;
+                str += mas[i].ToString();
             }
+
             return str;
         }
 
-        static void Print(string msg, int x, int y, ConsoleColor foregroundcolor)
+        static int ConvertTo2R(int x10)
+        {
+            if ((x10 >= 0) && ((double)x10 / 2 < 1))
+            {
+                return x10 % 2;
+            }
+            else
+            {
+                return x10 % 2 + 10 * ConvertTo2R(x10 / 2);
+            }
+                       
+            
+        }
+
+            static void Print(string msg, int x, int y, ConsoleColor foregroundcolor)
         {
             // Установим позицию курсора на экране
             Console.SetCursorPosition(x, y);
