@@ -1,26 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /*
  * Царёв ВА
  * 
  * 1.	Реализовать простейшую хэш-функцию. На вход функции подается строка, 
  * на выходе получается сумма кодов символов.
- * 
- * 2.	Переписать программу, реализующее двоичное дерево поиска:
- * a.	Добавить в него обход дерева различными способами.
- * b.	Реализовать поиск в нём.
- * c.	*Добавить в программу обработку командной строки с помощью которой 
- * можно указывать, из какого файла считывать данные, каким образом обходить дерево.
- * 
- * 3.	Разработать базу данных студентов, состоящую из полей «Имя», «Возраст»,
- * «Табельный номер», в которой использовать все знания, полученные на уроках.
- * Данные следует считать в двоичное дерево поиска. Реализовать поиск по какому-нибудь
- * полю базы данных.
- * 
+ *
  */
 
 namespace _1
@@ -29,6 +14,47 @@ namespace _1
     {
         static void Main(string[] args)
         {
+            Console.Write("Введите строку: ");
+                 
+            Console.WriteLine("Сумма: {0}", Hashsum(Console.ReadLine()));
+
+            Console.WriteLine("\nНажмите эникей");
+            Console.ReadKey();
+        }
+
+        /// <summary>
+        /// Принимает строку и отдает сумму кодов символов
+        /// </summary>
+        /// <param name="str">строка</param>
+        /// <returns>сумма</returns>
+        static int Hashsum(string str)
+        {
+            int sum = 0;
+            int[] chMas = new int[str.Length];
+            int i = 0;
+            foreach (char c in str)
+                chMas[i++] = (int)c;
+
+            foreach (int item in chMas)
+                sum += item;
+
+            return sum;
+        }
+
+        /// <summary>
+        /// Принимает строку и отдает строку
+        /// </summary>
+        /// <param name="str">строка</param>
+        /// <returns>строка</returns>
+        static string Hashsum2(string str)
+        {
+            char[] chMas = new char[str.Length];
+            int i = 0;
+            foreach (char c in str)
+                chMas[i++] = c;
+
+            
+            return "";
         }
     }
 }
