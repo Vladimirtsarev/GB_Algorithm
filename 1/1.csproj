@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A26B0ADD-6549-4130-A45A-C6C92487E1CA}</ProjectGuid>
+    <ProjectGuid>{6A4CDE16-0D9D-48E2-B2B3-2EBF600C01C7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_14_Automorphic_num</RootNamespace>
-    <AssemblyName>14_Automorphic_num</AssemblyName>
+    <RootNamespace>_1</RootNamespace>
+    <AssemblyName>1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
