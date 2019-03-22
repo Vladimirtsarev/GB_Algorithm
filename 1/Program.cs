@@ -17,11 +17,11 @@ namespace _1
             int[] A = new int[ReadFile("data.txt").Length]; // определяем массив
             A = ReadFile("data.txt");                       // читаем массив из файла
 
-            PrintMtrx(A);                                   // выводим массив на экран
+            PrintArray(A);                                   // выводим массив на экран
 
             SimpleCountingSort(ref A);                      // Сортировка подсчетом
 
-            PrintMtrx(A);                                   // выводим массив на экран
+            PrintArray(A);                                   // выводим массив на экран
 
             Exit();
         }
@@ -54,7 +54,7 @@ namespace _1
         /// Выводим массив на экран
         /// </summary>
         /// <param name="AdMtrx">массив</param>
-        static void PrintMtrx(int[] A)
+        static void PrintArray(int[] A)
         {
             Console.WriteLine("Массив:");
             Console.Write("\t");
@@ -72,6 +72,14 @@ namespace _1
         /// <returns>матрица смежности</returns>
         static int[] ReadFile(string fname)
         {
+            if (!File.Exists(fname))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("Ошибка! Файла {0} не существует", fname);
+                Console.ForegroundColor = ConsoleColor.Gray;
+                Exit();
+                Environment.Exit(0);
+            }
             string str = File.ReadAllText(fname);
             
             string[] str2 = str.Split(' ');
